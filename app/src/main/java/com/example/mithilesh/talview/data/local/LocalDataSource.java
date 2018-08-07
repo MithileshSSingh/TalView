@@ -31,4 +31,24 @@ public class LocalDataSource implements DataSource {
 
         return INSTANCE;
     }
+
+    @Override
+    public void getAllPost(GetAllPostCallback callback) {
+
+    }
+
+    @Override
+    public void getAllComments(Integer postId, GetPostDetailCallBack callBack) {
+
+    }
+
+    @Override
+    public void getAllAlbum(GetAllAlbumCallBack callBack) {
+        
+    }
+
+    @Override
+    public void getAllPhotos(Integer albumId, GetAlbumDetailCallBack callBack) {
+
+    }
 }

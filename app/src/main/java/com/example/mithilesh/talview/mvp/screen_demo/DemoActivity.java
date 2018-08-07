@@ -55,7 +55,7 @@ public class DemoActivity extends BaseActivity {
     @Override
     protected void initMembers() {
 
-        showFragment(AppConstants.Screens.SCREEN_LOGIN, null);
+        showFragment(AppConstants.Screens.SCREEN_MAIN_POST, null);
 
     }
 

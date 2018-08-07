@@ -8,7 +8,7 @@ import android.content.Context;
 import com.example.mithilesh.talview.data.local.dao.MessageDao;
 import com.example.mithilesh.talview.data.local.entities.Message;
 
-@Database(entities = {Message.class}, version = 1)
+@Database(entities = {Message.class}, version = 1, exportSchema = false)
 public abstract class DbHelper extends RoomDatabase {
 
     private static DbHelper INSTANCE;

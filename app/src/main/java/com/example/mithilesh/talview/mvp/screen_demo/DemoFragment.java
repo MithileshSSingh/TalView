@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import com.example.mithilesh.talview.R;
 import com.example.mithilesh.talview.di.RepositoryInjector;
 import com.example.mithilesh.talview.mvp.BaseFragment;
-import com.example.mithilesh.talview.mvp.model.User;
 
 
 public class DemoFragment extends BaseFragment implements DemoContract.View {
@@ -17,7 +16,6 @@ public class DemoFragment extends BaseFragment implements DemoContract.View {
     public static final String TAG = DemoFragment.class.getSimpleName();
 
     private DemoContract.Presenter mPresenter;
-    private User data;
 
     public DemoFragment() {
     }

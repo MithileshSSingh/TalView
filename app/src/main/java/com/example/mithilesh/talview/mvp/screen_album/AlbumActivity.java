@@ -1,8 +1,6 @@
-package com.example.mithilesh.talview.mvp.screen_main;
+package com.example.mithilesh.talview.mvp.screen_album;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,14 +10,13 @@ import com.example.mithilesh.talview.mvp.BaseActivity;
 import com.example.mithilesh.talview.utils.AppConstants;
 
 
-public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class AlbumActivity extends BaseActivity {
     private Toolbar toolbar;
-    private BottomNavigationView mNavigationView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_base_layout);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -52,14 +49,13 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
 
     @Override
     protected void initView() {
-        mNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
 
     }
 
     @Override
     protected void initMembers() {
 
-        showFragment(AppConstants.Screens.SCREEN_MAIN_POST, null);
+        showFragment(AppConstants.Screens.SCREEN_ALBUM, null);
 
     }
 
@@ -70,26 +66,11 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
 
     @Override
     protected void initListeners() {
-        mNavigationView.setOnNavigationItemSelectedListener(this);
+
     }
 
     @Override
     protected void initData() {
 
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.navigation_post:
-                showFragment(AppConstants.Screens.SCREEN_MAIN_POST, null);
-                break;
-            case R.id.navigation_album:
-                showFragment(AppConstants.Screens.SCREEN_MAIN_ALBUM, null);
-                break;
-        }
-
-        return true;
     }
 }
