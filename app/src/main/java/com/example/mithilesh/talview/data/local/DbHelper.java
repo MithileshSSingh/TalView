@@ -5,10 +5,10 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.example.mithilesh.talview.data.local.dao.MessageDao;
-import com.example.mithilesh.talview.data.local.entities.Message;
+import com.example.mithilesh.talview.data.local.dao.PostDao;
+import com.example.mithilesh.talview.data.local.entities.Post;
 
-@Database(entities = {Message.class}, version = 1, exportSchema = false)
+@Database(entities = {Post.class}, version = 1, exportSchema = false)
 public abstract class DbHelper extends RoomDatabase {
 
     private static DbHelper INSTANCE;
@@ -26,5 +26,5 @@ public abstract class DbHelper extends RoomDatabase {
         return INSTANCE;
     }
 
-    public abstract MessageDao messageDao();
+    public abstract PostDao postDao();
 }
